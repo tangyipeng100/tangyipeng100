@@ -1,0 +1,31 @@
+# Few-shot (5-shot / 10-shot) training configuration
+model:
+  backbone: efficientnet_b0        # good balance of accuracy vs size
+  num_classes: 5
+  pretrained: true
+  freeze_backbone: true            # freeze backbone when data is very limited
+
+data:
+  train_dir: data/train
+  val_dir: data/val
+  image_size: 224
+  num_workers: 2
+  shots_per_class: 5              # 5-shot learning
+  augment: true
+
+training:
+  epochs: 100
+  batch_size: 8
+  optimizer: adamw
+  lr: 5e-4
+  weight_decay: 5e-4
+  scheduler: cosine
+  warmup_epochs: 10
+  early_stopping_patience: 20
+  label_smoothing: 0.2            # stronger smoothing for small datasets
+
+export:
+  format: onnx
+  output_dir: exports/
+  simplify: true
+  dynamic_batch: true

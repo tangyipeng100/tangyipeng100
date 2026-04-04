@@ -1,0 +1,32 @@
+# Small-sample training configuration
+model:
+  backbone: mobilenetv3_small_100  # lightweight, mobile-friendly
+  num_classes: 10
+  pretrained: true
+  freeze_backbone: false           # set true for fewer samples
+
+data:
+  train_dir: data/train
+  val_dir: data/val
+  image_size: 224
+  num_workers: 4
+  # Few-shot settings
+  shots_per_class: 10             # samples per class (5/10/20 for few-shot)
+  augment: true
+
+training:
+  epochs: 50
+  batch_size: 16
+  optimizer: adamw
+  lr: 1e-3
+  weight_decay: 1e-4
+  scheduler: cosine
+  warmup_epochs: 5
+  early_stopping_patience: 10
+  label_smoothing: 0.1
+
+export:
+  format: onnx                    # onnx for mobile deployment
+  output_dir: exports/
+  simplify: true
+  dynamic_batch: true
