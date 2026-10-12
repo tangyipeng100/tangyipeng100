@@ -41,6 +41,28 @@ Ph.D. in Mechanical Engineering, Zhejiang University
 <tr>
 <td width="50%" valign="top">
 
+### [multiview-vln-showcase](https://github.com/tangyipeng100/multiview-vln-showcase)
+
+Multi-view pure-vision language navigation that connects camera observations, language goals, and continuous robot motion. Real-robot demonstrations cover cross-area navigation, semantic object search, access-gate passage, and elevator entry/exit, alongside closed-loop simulation evaluations.
+
+**Pure Vision · VLN · Real-Robot Demos**<br />
+[Explore the demos →](https://tangyipeng100.github.io/multiview-vln-showcase/) · [Repository](https://github.com/tangyipeng100/multiview-vln-showcase)
+
+</td>
+<td width="50%" valign="top">
+
+### [GOAI2026_kbrs](https://github.com/tangyipeng100/GOAI2026_kbrs)
+
+Localization-aided VLN for all-terrain industrial park patrol on the DEEP Robotics Lynx S10. The system combines semantic instructions, Goal Points, and single- or multi-view vision with high-fidelity Gaussian-scene training. Includes the system architecture, core inference interfaces, and 30 segment-level simulation replays.
+
+**GOAI 2026 Runner-up · Algorithm Innovation Award**<br />
+[Explore the project →](https://tangyipeng100.github.io/GOAI2026_kbrs/) · [Repository](https://github.com/tangyipeng100/GOAI2026_kbrs)
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
 ### [POI_VLM](https://github.com/tangyipeng100/POI_VLM)
 
 POI-guided vision-language decision making for outdoor robot local navigation. The repository includes the public code slice and a visual project page with demos and presentation material.
